@@ -5,7 +5,7 @@ import { whatsappLink } from "@/lib/brand";
 import { cn } from "@/lib/utils";
 import { CtaLink, SectionHeading, WhatsAppIcon, cta } from "./ui";
 
-const BUSINESS_TYPES = ["Minisúper", "Miscelánea", "Frutería", "Distribuidor", "Otro"] as const;
+export const BUSINESS_TYPES = ["Minisúper", "Miscelánea", "Frutería", "Tienda de Conveniencia", "Dulcería", "Distribuidor", "Otro"] as const;
 
 const schema = z.object({
   nombre: z.string().trim().min(2, "Escribe tu nombre").max(80),
@@ -44,7 +44,7 @@ export function Distributor() {
     setStatus("sending");
     const v = parsed.data;
     const msg = [
-      "Hola Chokolo Mix, quiero ser distribuidor.",
+      "Hola ChokoloMix, quiero ser distribuidor.",
       `Nombre: ${v.nombre}`,
       `Negocio: ${v.negocio}`,
       `Ciudad: ${v.ciudad}`,
@@ -62,14 +62,14 @@ export function Distributor() {
     <section id="distribuidores" className="py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[1fr_1.1fr]">
         <div>
-          <SectionHeading eyebrow="Conviértete en distribuidor" title="¿Te gustaría vender Chokolo Mix?">
+          <SectionHeading eyebrow="Conviértete en distribuidor" title="¿Te gustaría vender ChokoloMix?">
             Estamos buscando nuevos socios comerciales que quieran llevar nuestros productos a más
             personas. Si tienes una tienda, negocio o estás interesado en distribuir nuestros snacks,
             queremos conocerte.
           </SectionHeading>
           <div className="reveal mt-9">
             <CtaLink
-              href={whatsappLink("Hola Chokolo Mix, quiero ser distribuidor.")}
+              href={whatsappLink("Hola ChokoloMix, quiero ser distribuidor.")}
               variant="whatsapp"
               size="lg"
             >

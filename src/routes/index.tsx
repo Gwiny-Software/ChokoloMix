@@ -6,7 +6,7 @@ import { Distributor } from "@/components/site/Distributor";
 import { Contact, FloatingWhatsApp, Footer } from "@/components/site/Contact";
 import { useReveal } from "@/hooks/use-reveal";
 
-const TITLE = "Chokolo Mix — Dulces & Snacks | Mezclas de frutos secos en Durango";
+const TITLE = "ChokoloMix — Dulces & Snacks | Mezclas de frutos secos en Durango";
 const DESC =
   "Mix Natural, Mix Tropical y Mix Enchilado en bolsa resellable de 43 g. Más de 300 puntos de venta en Durango. Conviértete en distribuidor.";
 

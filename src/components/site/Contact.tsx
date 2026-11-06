@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import logo from "@/assets/chokolo_logo.png.asset.json";
-import bear from "@/assets/chokolo_bear.png.asset.json";
+import bear from "@/assets/chokolo-logo-bear.png";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -16,10 +16,10 @@ export function Contact() {
     <section id="contacto" className="px-5 pb-20 md:px-8 md:pb-28">
       <div className="reveal relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-primary px-7 py-14 text-primary-foreground md:px-16 md:py-20">
         <img
-          src={bear.url}
+          src={bear}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute -bottom-10 -right-6 hidden h-[115%] opacity-90 md:block"
+          className="pointer-events-none absolute bottom-0 right-0 hidden h-[95%] w-[42%] object-contain object-bottom opacity-90 md:block"
         />
         <div className="relative max-w-xl">
           <p className="eyebrow text-gold">Contacto</p>
@@ -42,7 +42,7 @@ export function Contact() {
             </li>
           </ul>
           <div className="mt-10 flex flex-wrap gap-3">
-            <CtaLink href={whatsappLink("Hola Chokolo Mix, me gustaría más información.")} variant="light" size="lg">
+            <CtaLink href={whatsappLink("Hola ChokoloMix, me gustaría más información.")} variant="light" size="lg">
               <WhatsAppIcon className="size-5" /> Contactar por WhatsApp
             </CtaLink>
             <CtaLink href={INSTAGRAM_URL} variant="ghostLight" size="lg">
@@ -64,7 +64,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <div className="inline-block rounded-2xl bg-background p-3">
-            <img src={logo.url} alt="Chokolo Mix" className="h-20 w-auto" loading="lazy" />
+            <img src={logo.url} alt="ChokoloMix" className="h-20 w-auto" loading="lazy" />
           </div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-wine-foreground/70">
             Mezclas de frutos secos y snacks desde Durango, México, para disfrutar y compartir.
@@ -89,7 +89,7 @@ export function Footer() {
         </FooterCol>
         <FooterCol title="Contacto">
           <li><a href="tel:+526182751730" className="hover:text-gold">{PHONE_DISPLAY}</a></li>
-          <li><a href={whatsappLink("Hola Chokolo Mix")} target="_blank" rel="noopener noreferrer" className="hover:text-gold">WhatsApp</a></li>
+          <li><a href={whatsappLink("Hola ChokoloMix")} target="_blank" rel="noopener noreferrer" className="hover:text-gold">WhatsApp</a></li>
           <li><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Instagram</a></li>
           <li><a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Facebook</a></li>
           <li className="text-wine-foreground/60">Durango, México</li>
@@ -97,12 +97,12 @@ export function Footer() {
       </div>
       <div className="border-t border-wine-foreground/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-xs text-wine-foreground/60 md:flex-row md:items-center md:justify-between md:px-8">
-          <p>© {new Date().getFullYear()} Chokolo Mix — Dulces & Snacks.</p>
+          <p>© {new Date().getFullYear()} ChokoloMix — Dulces & Snacks.</p>
           <details className="md:text-right">
             <summary className="cursor-pointer hover:text-gold">Aviso de privacidad</summary>
             <p className="mt-2 max-w-md text-left">
-              Los datos que compartes en el formulario se envían directamente por WhatsApp a Chokolo
-              Mix y se usan únicamente para dar seguimiento a tu solicitud comercial.
+              Los datos que compartes en el formulario se envían directamente por WhatsApp a ChokoloMix
+              y se usan únicamente para dar seguimiento a tu solicitud comercial.
             </p>
           </details>
         </div>
@@ -123,7 +123,7 @@ function FooterCol({ title, children }: { title: string; children: React.ReactNo
 export function FloatingWhatsApp() {
   return (
     <a
-      href={whatsappLink("Hola Chokolo Mix, me gustaría más información.")}
+      href={whatsappLink("Hola ChokoloMix, me gustaría más información.")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escríbenos por WhatsApp"
