@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import logo from "@/assets/chokolo_logo.png.asset.json";
-import bear from "@/assets/chokolo-contact-bear.png";
+import bear from "@/assets/chokolo-logo-bear.png";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -19,7 +19,7 @@ export function Contact() {
           src={bear}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute -bottom-10 -right-6 hidden h-[115%] opacity-90 md:block"
+          className="pointer-events-none absolute bottom-0 right-0 hidden h-[95%] w-[42%] object-contain object-bottom opacity-90 md:block"
         />
         <div className="relative max-w-xl">
           <p className="eyebrow text-gold">Contacto</p>
@@ -101,8 +101,8 @@ export function Footer() {
           <details className="md:text-right">
             <summary className="cursor-pointer hover:text-gold">Aviso de privacidad</summary>
             <p className="mt-2 max-w-md text-left">
-              Los datos que compartes en el formulario se envían directamente por WhatsApp a Chokolo
-              Mix y se usan únicamente para dar seguimiento a tu solicitud comercial.
+              Los datos que compartes en el formulario se envían directamente por WhatsApp a ChokoloMix
+              y se usan únicamente para dar seguimiento a tu solicitud comercial.
             </p>
           </details>
         </div>
