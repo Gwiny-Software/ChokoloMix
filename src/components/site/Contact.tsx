@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import logo from "@/assets/chokolo_logo.png.asset.json";
-import bear from "@/assets/chokolo-logo-bear.png";
+import bear from "@/assets/chokolo-contact-mascot.png.asset.json";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -16,7 +16,7 @@ export function Contact() {
     <section id="contacto" className="px-5 pb-20 md:px-8 md:pb-28">
       <div className="reveal relative mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-primary px-7 py-14 text-primary-foreground md:px-16 md:py-20">
         <img
-          src={bear}
+          src={bear.url}
           alt=""
           aria-hidden
           className="pointer-events-none absolute bottom-0 right-0 hidden h-[95%] w-[42%] object-contain object-bottom opacity-90 md:block"
