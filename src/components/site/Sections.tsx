@@ -180,13 +180,14 @@ export function Distribution() {
 
         <div className="mt-6 grid grid-cols-3 gap-3 md:gap-6">
           {[pv1, pv2, pv3].map((img, i) => (
-            <img
-              key={img.url}
-              src={img.url}
-              alt={`Exhibidor de Chokolo Mix en punto de venta ${i + 1}`}
-              className="reveal aspect-[4/5] w-full rounded-2xl object-cover"
-              loading="lazy"
-            />
+            <div key={img.url} className="reveal overflow-hidden rounded-2xl">
+              <img
+                src={img.url}
+                alt={`Exhibidor de Chokolo Mix en punto de venta ${i + 1}`}
+                className="aspect-[4/5] w-full scale-[1.18] object-cover"
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
 

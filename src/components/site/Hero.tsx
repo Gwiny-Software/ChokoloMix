@@ -22,7 +22,7 @@ export function Hero() {
             Descubre Chokolo Mix, mezclas irresistibles de frutos secos y snacks creadas para
             disfrutar, compartir y llevar contigo a donde quieras.
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col flex-wrap gap-3 sm:flex-row">
             <CtaLink href="#productos" size="lg">
               Conoce nuestros productos <ArrowRight className="size-4" />
             </CtaLink>
