@@ -19,7 +19,7 @@ export function Hero() {
             El sabor que <span className="text-primary">conquista</span> cada momento.
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Descubre Chokolo Mix, mezclas irresistibles de frutos secos y snacks creadas para
+            Descubre ChokoloMix, mezclas irresistibles de frutos secos y snacks creadas para
             disfrutar, compartir y llevar contigo a donde quieras.
           </p>
           <div className="mt-9 flex flex-col flex-wrap gap-3 sm:flex-row">
@@ -27,7 +27,7 @@ export function Hero() {
               Conoce nuestros productos <ArrowRight className="size-4" />
             </CtaLink>
             <CtaLink href="#distribuidores" variant="outline" size="lg">
-              <Store className="size-4" /> Quiero distribuir Chokolo Mix
+              <Store className="size-4" /> Quiero distribuir ChokoloMix
             </CtaLink>
           </div>
           <dl className="mt-12 flex gap-10 border-t border-border pt-8">
@@ -50,7 +50,7 @@ export function Hero() {
           <div className="absolute inset-[8%] rounded-[3rem] bg-wine-gradient shadow-soft" />
           <img
             src={bear.url}
-            alt="Osito Chokolo disfrutando una bolsa de Chokolo Mix"
+            alt="Osito Chokolo disfrutando una bolsa de ChokoloMix"
             className="animate-float absolute left-1/2 top-[2%] h-[62%] -translate-x-1/2 drop-shadow-2xl"
           />
           <div className="absolute inset-x-[4%] bottom-[4%] grid grid-cols-3 gap-3">

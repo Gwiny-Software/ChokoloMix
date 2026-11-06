@@ -28,8 +28,8 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
-        <a href="#inicio" aria-label="Chokolo Mix — inicio" className="flex items-center">
-          <img src={logo.url} alt="Chokolo Mix Dulces & Snacks" className="h-14 w-auto" />
+        <a href="#inicio" aria-label="ChokoloMix — inicio" className="flex items-center">
+          <img src={logo.url} alt="ChokoloMix Dulces & Snacks" className="h-14 w-auto" />
         </a>
         <nav aria-label="Principal" className="hidden items-center gap-8 lg:flex">
           {NAV.map((n) => (
@@ -43,7 +43,7 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden lg:block">
-          <CtaLink href={whatsappLink("Hola Chokolo Mix, me gustaría hacer un pedido.")} variant="wine">
+          <CtaLink href={whatsappLink("Hola ChokoloMix, me gustaría hacer un pedido.")} variant="wine">
             <WhatsAppIcon className="size-4" /> Hacer pedido
           </CtaLink>
         </div>
@@ -76,7 +76,7 @@ export function Header() {
             ))}
           </ul>
           <CtaLink
-            href={whatsappLink("Hola Chokolo Mix, me gustaría hacer un pedido.")}
+            href={whatsappLink("Hola ChokoloMix, me gustaría hacer un pedido.")}
             variant="whatsapp"
             size="lg"
             className="mt-8 w-full"

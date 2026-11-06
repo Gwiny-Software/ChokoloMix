@@ -28,7 +28,7 @@ export function About() {
         <div className="reveal relative">
           <img
             src={trio.url}
-            alt="Las tres variedades de Chokolo Mix: Tropical, Natural y Enchilado"
+            alt="Las tres variedades de ChokoloMix: Tropical, Natural y Enchilado"
             className="w-full rounded-3xl object-cover shadow-soft"
             loading="lazy"
           />
@@ -38,8 +38,8 @@ export function About() {
           </div>
         </div>
         <div>
-          <SectionHeading eyebrow="Conoce Chokolo Mix" title="Mucho más que un snack.">
-            En Chokolo Mix creemos que cada momento merece algo delicioso. Por eso ofrecemos mezclas
+          <SectionHeading eyebrow="Conoce ChokoloMix" title="Mucho más que un snack.">
+            En ChokoloMix creemos que cada momento merece algo delicioso. Por eso ofrecemos mezclas
             de frutos secos y snacks que combinan diferentes sabores, texturas y experiencias.
           </SectionHeading>
           <ul className="reveal mt-10 grid gap-4 sm:grid-cols-2">
@@ -75,7 +75,7 @@ function ProductCard({ p, i }: { p: Product; i: number }) {
       <div className="relative overflow-hidden">
         <img
           src={p.image}
-          alt={`Empaque ${p.name} de Chokolo Mix`}
+          alt={`Empaque ${p.name} de ChokoloMix`}
           className="aspect-[5/4] w-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
@@ -98,7 +98,7 @@ function ProductCard({ p, i }: { p: Product; i: number }) {
           <Package className="size-4 text-primary" /> {PRESENTATION}
         </p>
         <CtaLink
-          href={whatsappLink(`Hola Chokolo Mix, me gustaría recibir información sobre ${p.name}.`)}
+          href={whatsappLink(`Hola ChokoloMix, me gustaría recibir información sobre ${p.name}.`)}
           variant="wine"
           className="mt-6 w-full"
         >
@@ -134,7 +134,7 @@ export function Distribution() {
     <section id="distribucion" className="bg-wine-gradient py-20 text-wine-foreground md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading eyebrow="Distribución" title="Un gran sabor, listo para llegar a más lugares." light>
-          Chokolo Mix llega a sus clientes a través de dos modalidades: canal detalle por ruta y
+          ChokoloMix llega a sus clientes a través de dos modalidades: canal detalle por ruta y
           canal mayoreo.
         </SectionHeading>
 
@@ -183,7 +183,7 @@ export function Distribution() {
             <div key={img.url} className="reveal overflow-hidden rounded-2xl">
               <img
                 src={img.url}
-                alt={`Exhibidor de Chokolo Mix en punto de venta ${i + 1}`}
+                alt={`Exhibidor de ChokoloMix en punto de venta ${i + 1}`}
                 className="aspect-[4/5] w-full scale-[1.18] object-cover"
                 loading="lazy"
               />
@@ -198,7 +198,7 @@ export function Distribution() {
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           <article className="reveal overflow-hidden rounded-3xl bg-card text-card-foreground">
-            <img src={displayShop.url} alt="Display de Chokolo Mix en tienda" className="aspect-[16/11] w-full object-cover" loading="lazy" />
+            <img src={displayShop.url} alt="Display de ChokoloMix en tienda" className="aspect-[16/11] w-full object-cover" loading="lazy" />
             <div className="p-7">
               <p className="eyebrow text-primary">Display</p>
               <h4 className="mt-2 text-2xl font-bold text-wine">Caja impulsora con 6 bolsas de 43 g</h4>
@@ -214,7 +214,7 @@ export function Distribution() {
           <article className="reveal overflow-hidden rounded-3xl bg-card text-card-foreground">
             <div className="grid grid-cols-2">
               <img src={displayBags.url} alt="Display con las tres variedades" className="aspect-[4/5] w-full object-cover md:aspect-[8/11]" loading="lazy" />
-              <img src={master.url} alt="Caja master de Chokolo Mix" className="aspect-[4/5] w-full object-cover md:aspect-[8/11]" loading="lazy" />
+              <img src={master.url} alt="Caja master de ChokoloMix" className="aspect-[4/5] w-full object-cover md:aspect-[8/11]" loading="lazy" />
             </div>
             <div className="p-7">
               <p className="eyebrow text-primary">Caja master</p>
@@ -240,7 +240,7 @@ export function Why() {
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionHeading eyebrow="¿Por qué Chokolo Mix?" title="Razones para elegirnos." center />
+        <SectionHeading eyebrow="¿Por qué ChokoloMix?" title="Razones para elegirnos." center />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map(({ icon: Icon, t, d }, i) => (
             <div

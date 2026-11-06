@@ -6,7 +6,7 @@ export const PHONE_DISPLAY = "618 275 17 30";
 export const WHATSAPP_NUMBER = "526182751730";
 export const INSTAGRAM_URL = "https://www.instagram.com/chokolo_snacks/";
 export const FACEBOOK_URL =
-  "https://www.facebook.com/search/top?q=CHOKOLO%20DULCES%20%26%20SNACKS";
+  "https://www.facebook.com/people/Chokolo-Dulces-Snacks/61589474303030/";
 
 export function whatsappLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
