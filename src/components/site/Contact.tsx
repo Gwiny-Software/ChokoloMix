@@ -19,7 +19,7 @@ export function Contact() {
           src={bear.url}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute bottom-0 right-0 hidden h-[95%] w-[42%] object-contain object-bottom opacity-90 md:block"
+          className="pointer-events-none absolute bottom-0 right-0 hidden h-[95%] w-[42%] object-contain object-bottom opacity-90 md:block lg:-bottom-[16%] lg:-right-[18%] lg:h-[140%] lg:w-auto lg:max-w-none"
         />
         <div className="relative max-w-xl">
           <p className="eyebrow text-gold">Contacto</p>
