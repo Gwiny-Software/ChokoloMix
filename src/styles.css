@@ -1,12 +1,15 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+/* Self-hosted fonts (OFL-1.1): no visitor data goes to Google Fonts. */
+@import "@fontsource-variable/bricolage-grotesque/opsz.css";
+@import "@fontsource-variable/manrope/wght.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -81,6 +84,13 @@
   }
   html {
     scroll-behavior: smooth;
+    /* Anchored sections land below the fixed header. */
+    scroll-padding-top: 6rem;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 6px;
   }
   body {
     background-color: var(--color-background);
@@ -110,25 +120,105 @@
   text-transform: uppercase;
 }
 
-@utility reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-  &.is-visible {
-    opacity: 1;
-    transform: none;
+/* ---------- Motion: hover/press layer, load-in, image loading ---------- */
+:root {
+  --m-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Hero content enters once on page load; nothing animates on scroll. */
+@keyframes enter-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@utility enter {
+  animation: enter-up 0.7s var(--m-ease) both;
+  animation-delay: calc(var(--i, 0) * 90ms + 60ms);
+}
+
+/* Photos fade in when their file arrives, over a quiet placeholder tone.
+   Only once JS runs (html[data-js]), so a page without JS still shows them. */
+@utility img-load {
+  background-color: var(--color-muted);
+  transition: opacity 0.5s var(--m-ease), transform 0.6s var(--m-ease);
+  [data-js] &:not(.is-loaded) {
+    opacity: 0;
   }
 }
 
-@keyframes float-soft {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-14px) rotate(1deg); }
-}
-@utility animate-float {
-  animation: float-soft 6s ease-in-out infinite;
+/* Top-of-page scroll progress. */
+@utility scroll-progress {
+  transform-origin: 0 50%;
+  transform: scaleX(var(--progress, 0));
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .animate-float { animation: none; }
+  html { scroll-behavior: auto; }
+  .enter { animation: none; }
+  .img-load { opacity: 1; transition: none; }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* Long-form legal text. */
+.legal {
+  color: var(--color-foreground);
+  line-height: 1.7;
+}
+.legal h2 {
+  margin-top: 2.75rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-wine);
+}
+.legal h2:first-child {
+  margin-top: 0;
+}
+.legal h3 {
+  margin-top: 1.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-wine);
+}
+.legal p,
+.legal ul,
+.legal table {
+  margin-top: 0.9rem;
+}
+.legal ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+.legal li + li {
+  margin-top: 0.35rem;
+}
+.legal a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal a:hover {
+  color: var(--color-wine);
+}
+.legal .table-wrap {
+  overflow-x: auto;
+}
+.legal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.legal th,
+.legal td {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.7rem 0.75rem 0.7rem 0;
+  text-align: left;
+  vertical-align: top;
+}
+.legal th {
+  color: var(--color-wine);
+  font-weight: 700;
 }

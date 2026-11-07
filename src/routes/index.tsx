@@ -1,10 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { About, Distribution, Products, Why } from "@/components/site/Sections";
 import { Distributor } from "@/components/site/Distributor";
-import { Contact, FloatingWhatsApp, Footer } from "@/components/site/Contact";
-import { useReveal } from "@/hooks/use-reveal";
+import { Contact } from "@/components/site/Contact";
+import { SiteLayout } from "@/components/site/Layout";
 
 const TITLE = "ChokoloMix — Dulces & Snacks | Mezclas de frutos secos en Durango";
 const DESC =
@@ -26,21 +25,15 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  useReveal();
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Products />
-        <Distribution />
-        <Why />
-        <Distributor />
-        <Contact />
-      </main>
-      <Footer />
-      <FloatingWhatsApp />
-    </>
+    <SiteLayout>
+      <Hero />
+      <About />
+      <Products />
+      <Distribution />
+      <Why />
+      <Distributor />
+      <Contact />
+    </SiteLayout>
   );
 }
