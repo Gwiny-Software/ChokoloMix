@@ -1,3 +1,4 @@
+import { canonical } from "@/lib/brand";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LegalPage } from "@/components/site/Layout";
 import { COOKIE_SETTINGS_EVENT } from "@/components/site/SiteChrome";
@@ -8,7 +9,9 @@ const DESC = "Qué cookies y almacenamiento local usa el sitio de ChokoloMix y c
 
 export const Route = createFileRoute("/cookies")({
   head: () => ({
+    links: canonical("/cookies").links,
     meta: [
+      ...canonical("/cookies").meta,
       { title: TITLE },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },

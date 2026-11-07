@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { LegalPage } from "@/components/site/Layout";
-import { PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/brand";
+import { canonical, PHONE_DISPLAY, PHONE_TEL, whatsappLink } from "@/lib/brand";
 
 const TITLE = "Aviso de privacidad — ChokoloMix";
 const DESC =
@@ -8,7 +8,9 @@ const DESC =
 
 export const Route = createFileRoute("/privacidad")({
   head: () => ({
+    links: canonical("/privacidad").links,
     meta: [
+      ...canonical("/privacidad").meta,
       { title: TITLE },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },

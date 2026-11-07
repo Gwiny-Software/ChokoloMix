@@ -3,6 +3,18 @@ import tropical from "@/assets/mix_tropical.jpg.asset.json";
 import enchilado from "@/assets/mix_enchilado.jpg.asset.json";
 
 export const BRAND = "ChokoloMix";
+/** Public address of the site; used for canonical URLs, the sitemap and social previews. */
+export const SITE_URL = "https://chokolomix.gwiny.com.mx";
+export const OG_IMAGE = `${SITE_URL}/images/mix_trio.jpg`;
+
+/** Canonical link + og:url for a route path such as "/" or "/privacidad". */
+export function canonical(path: string) {
+  const url = `${SITE_URL}${path === "/" ? "/" : path}`;
+  return {
+    meta: [{ property: "og:url", content: url }],
+    links: [{ rel: "canonical", href: url }],
+  };
+}
 export const PHONE_DISPLAY = "618 275 17 30";
 export const PHONE_TEL = "tel:+526182751730";
 export const WHATSAPP_NUMBER = "526182751730";

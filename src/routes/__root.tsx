@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteChrome } from "../components/site/SiteChrome";
+import { OG_IMAGE } from "../lib/brand";
 
 function NotFoundComponent() {
   return (
@@ -82,6 +83,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "color-scheme", content: "light" },
       { name: "author", content: "ChokoloMix" },
       { name: "theme-color", content: "#3d1418" },
+      { property: "og:site_name", content: "ChokoloMix" },
+      { property: "og:image", content: OG_IMAGE },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

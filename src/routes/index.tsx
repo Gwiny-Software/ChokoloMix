@@ -1,3 +1,4 @@
+import { FACEBOOK_URL, INSTAGRAM_URL, SITE_URL, canonical } from "@/lib/brand";
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { About, Distribution, Products, Why } from "@/components/site/Sections";
@@ -11,7 +12,9 @@ const DESC =
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: canonical("/").links,
     meta: [
+      ...canonical("/").meta,
       { title: TITLE },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
@@ -19,6 +22,27 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "es_MX" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "ChokoloMix",
+          alternateName: "Chokolo Dulces & Snacks",
+          url: SITE_URL,
+          logo: `${SITE_URL}/images/chokolo_logo.png`,
+          telephone: "+52 618 275 1730",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Durango",
+            addressRegion: "Durango",
+            addressCountry: "MX",
+          },
+          sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
+        }),
+      },
     ],
   }),
   component: Index,
