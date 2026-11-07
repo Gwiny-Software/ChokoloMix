@@ -52,15 +52,6 @@ Permissions-Policy. La CSP solo se aplica en producción.
 - Términos y condiciones: `/terminos`
 - Política de cookies: `/cookies`
 
-El sitio no usa cookies de análisis ni de publicidad. Si se agregan, hay que pedir
-consentimiento antes de activarlas y actualizar la política de cookies.
-
-## Lovable
-
-Este repositorio está conectado a [Lovable](https://lovable.dev). Los commits a `main` se
-sincronizan con el editor. No reescribas el historial ya publicado (sin `force push`) y lee
-`AGENTS.md` antes de modificar el proyecto.
-
 ---
 
 © ChokoloMix — Dulces & Snacks. Todos los derechos reservados. La marca, el logotipo, el osito
